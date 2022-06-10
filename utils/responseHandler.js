@@ -7,13 +7,11 @@ const responseHandler = async (res, responseCode, responseData, responseError, r
       errors:""
     }; 
     const msg = responseMessages[responseCode];
-    console.log(responseCode)
     result.success = responseSuccess ? responseSuccess: msg ? msg.success : false;
     result.statusCode = responseCode;
     result.message = responseMsg ? responseMsg : msg ? msg.message : '';
     result.data = responseData;
     result.errors = responseError;
-    console.log(msg);
     res.status(msg ? msg.httpCode : 400).json(result);
     return;
 }

@@ -10,9 +10,9 @@ const userErrorLog = new mongoose.Schema({
     functionName:{
         type: String,  
     },
-    user_id:{
-        type:  mongoose.Schema.Types.ObjectId,
-    },
+    // user_id:{
+    //     type:  mongoose.Schema.Types.ObjectId,
+    // },
     heading:{
         type: String,
     },
